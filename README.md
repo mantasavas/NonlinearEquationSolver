@@ -23,5 +23,6 @@ Our first try:
 3) x - n*pi = arctan(x - n*pi)
 4) x - n*pi = arctan(x)
 5) x = arctan(x) + n*pi
+
 Let's say n = 0, when we try again and check if function g(x) = arctan(x) converges. Function g(x) graph
   ![capture4](https://user-images.githubusercontent.com/14164123/30593914-093edb00-9d01-11e7-9e8c-4b746bc9d917.PNG)
