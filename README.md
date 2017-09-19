@@ -1,4 +1,7 @@
 # Nonlinear Equation Solver
+How function works?
+1) Input parameters: 
+
 Let's say we have initial equation: x = tan(x)
 
 First method we are going to solve this equation is called fixed point iteration method:
@@ -33,4 +36,4 @@ From graph we could clearly see, that this iteration should converge, but let's 
 2) when  x1 = 0.9505    then    g(0.9505)   =     arctan(0.9505)    = 0.76
 3) when  x2 = 0.76      then    g(0.76)     =     arctan(0.76)      = 0.6499
 4) when  x2 = 0.6499    then    g(0.6499)   =     arctan(0.6499)    = 0.5763
-It clearly slowly converges, and after many iterations we should get to our precise solution. But we should be conscious about precision, because then it slowly converges it is indicator that with the high precision given, we could still be far away from solution.
+It clearly slowly converges, and after many iterations we should get to our precise solution. But we should be conscious about precision, because then it slowly converges it is indicator that with the high precision given, we could still be far away from our solution.
