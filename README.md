@@ -7,7 +7,7 @@ First method we are going to solve this equation is called fixed point iteration
 
 ![capture](https://user-images.githubusercontent.com/14164123/30591336-33941ff0-9cf7-11e7-8e0b-cbe70af0eb76.PNG)
 
-As we can see from the graph final point there function after many iterations g(x + 1) = g(x) should converge to 0, and our initial guess should be close to it. Let's say our initial guess is x0 = 0,4, it could be anything, but closer to real solution the better :) So iteration would be as follows:
+As we can see from the graph final point there function after many iterations g(x + 1) = g(x) should converge to 0, and our initial guess should be close to it. Let's say our initial guess is x0 = 0,4, it could be anything, but the closer to real solution the better :) So iteration would be as follows:
 Function g(x) graph
 ![capture1](https://user-images.githubusercontent.com/14164123/30592401-728778e8-9cfb-11e7-97c9-380e69f25349.PNG)
   
