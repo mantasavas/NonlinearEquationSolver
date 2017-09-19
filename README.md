@@ -16,12 +16,12 @@ From graph we could clearly see, that this iteration should diverge, but let's w
 2) when  x1 = 0.42279   then    g(0.42279)  =     tan(0.42279)    = 0.44992
 3) when  x2 = 0.44992   then    g(0.44992)  =     tan(0.44992)    = 0.48295
 4) when  x2 = 0.48295   then    g(0.48295)  =     tan(0.48295)    = 0.52436
-5) It only goes further away from initial guess x0 = 0, so it really diverges. Conclusion, we need to find (modify) current function g(x) = tan(x) into function which will converge finally
+It only goes further away from initial guess x0 = 0, so it really diverges. Conclusion, we need to find (modify) current function g(x) = tan(x) into function which will converge finally
 Our first try:
 1) x = tan(x)   
 2) x = arctan(x)
 3) x - n*pi = arctan(x - n*pi)
 4) x - n*pi = arctan(x)
 5) x = arctan(x) + n*pi
-6) Let's say n = 0, when we try again and check if function g(x) = arctan(x) converges. Function g(x) graph
+Let's say n = 0, when we try again and check if function g(x) = arctan(x) converges. Function g(x) graph
   ![capture4](https://user-images.githubusercontent.com/14164123/30593914-093edb00-9d01-11e7-9e8c-4b746bc9d917.PNG)
