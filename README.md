@@ -16,6 +16,7 @@ From graph we could clearly see, that this iteration should diverge, but let's w
 2) when  x1 = 0.42279   then    g(0.42279)  =     tan(0.42279)    = 0.44992
 3) when  x2 = 0.44992   then    g(0.44992)  =     tan(0.44992)    = 0.48295
 4) when  x2 = 0.48295   then    g(0.48295)  =     tan(0.48295)    = 0.52436
+
 It only goes further away from initial guess x0 = 0, so it really diverges. Conclusion, we need to find (modify) current function g(x) = tan(x) into function which will converge finally
 Our first try:
 1) x = tan(x)   
