@@ -40,4 +40,4 @@ It clearly slowly converges, and after many iterations we should get to our prec
 
 Let's say n=1, when we could clearly see, this this iteration even nicer converges to our precise solution, in graph you can see functions: f(x) = tan(x), f(x) = arctan(x) + pi, f(x) = x
 
-![capture1](https://user-images.githubusercontent.com/14164123/30774024-fb649272-a084-11e7-8c7f-5f0eeeb04a86.PNG)
+![capture1](https://user-images.githubusercontent.com/14164123/30774158-b2434d16-a086-11e7-8c14-35161ec4c20d.PNG)
