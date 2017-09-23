@@ -1,7 +1,4 @@
 # Nonlinear Equation Solver
-How function works?
-1) Input parameters: 
-
 Let's say we have initial equation: x = tan(x)
 
 First method we are going to solve this equation is called fixed point iteration method:
