@@ -32,21 +32,16 @@ public class FixedPointIteration implements NonLinearMethod {
         List<Iteration> iterations = new ArrayList<Iteration>();
         Iteration iteration;
         double stopConditionAfter = ((1-maxDerivitive) / maxDerivitive) * precision;
-        System.out.println("Stop Condition after: " + stopConditionAfter);
-
         double stopConditionBefore = 100;
         double beforeResult;
         double result;
-
-        Object[][] data = new Object[maxIterationNumber][4];
         String[] columns = {"Iteration num.", "Variable x", "Result g(x)", "Difference |g(x) - x|"};
-
         beforeResult = initialGuess;
 
         for(int x = 0; (stopConditionBefore > stopConditionAfter) && (x <= maxIterationNumber - 1); x++)
         {
             // x = arctan(x)
-            result = Math.atan(beforeResult) + 2*Math.PI;
+            result = Math.atan(beforeResult) + Math.PI;
             stopConditionBefore = Math.abs(result - beforeResult);
 
             // Filling up the Iteration model with values
@@ -62,6 +57,7 @@ public class FixedPointIteration implements NonLinearMethod {
         }
 
         // Preparing for printing
+        Object[][] data = new Object[iterations.size()][4];
         int iterNum = 0;
         for (Iteration iter : iterations){
             data[iterNum][0] = iter.iterationNum;
@@ -70,6 +66,8 @@ public class FixedPointIteration implements NonLinearMethod {
             data[iterNum][3] = iter.difference;
             iterNum++;
         }
+
+        System.out.println("Final result: " + iterations.get(iterations.size() - 1).result_funct);
 
         TextTable tt = new TextTable(columns, data);
         tt.printTable();

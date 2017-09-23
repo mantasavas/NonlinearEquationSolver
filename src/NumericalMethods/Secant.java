@@ -2,7 +2,6 @@ package NumericalMethods;
 
 import Model.Iteration;
 import dnl.utils.text.table.TextTable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +34,7 @@ public class Secant implements NonLinearMethod {
         double result = 0;
         List<Iteration> iterations = new ArrayList<>();
 
-        Object[][] data = new Object[maxIterationNumber][5];
+
         String[] columns = {"Iteration num.", "First guess x0", "Second guess x1", "Result", "Difference |g(x) - x|"};
 
         for(int x = 0; (Math.abs(secondInitialGuess - firstInitialGuess) > precision) && (x < maxIterationNumber); x++)
@@ -44,15 +43,12 @@ public class Secant implements NonLinearMethod {
             result = secondInitialGuess - (((Math.tan(secondInitialGuess) - secondInitialGuess) * (secondInitialGuess- firstInitialGuess))/((Math.tan(secondInitialGuess) - secondInitialGuess) - (Math.tan(firstInitialGuess) - firstInitialGuess)));
             //result = secondInitialGuess - (((3*secondInitialGuess+Math.sin(secondInitialGuess)-Math.exp(secondInitialGuess)) * (secondInitialGuess- firstInitialGuess))/((3*secondInitialGuess+Math.sin(secondInitialGuess)-Math.exp(secondInitialGuess)) - (3*firstInitialGuess+Math.sin(firstInitialGuess)-Math.exp(firstInitialGuess))));
 
-            System.out.println("Inside for loop " + secondInitialGuess);
-
             Iteration iteration = new Iteration();
             iteration.result_funct = result;
             iteration.iterationNum = x + 1;
             iteration.first_guess = firstInitialGuess;
             iteration.second_guess = secondInitialGuess;
             iteration.difference = secondInitialGuess - firstInitialGuess;
-
             iterations.add(iteration);
 
             firstInitialGuess = secondInitialGuess;
@@ -60,11 +56,8 @@ public class Secant implements NonLinearMethod {
 
         }
 
-
-        //Resizing list
-
-
         // Preparing for printing
+        Object[][] data = new Object[iterations.size()][5];
         int iterNum = 0;
         for (Iteration iter : iterations){
             data[iterNum][0] = iter.iterationNum;
@@ -75,8 +68,9 @@ public class Secant implements NonLinearMethod {
             iterNum++;
         }
 
+        System.out.println("Final result: " + iterations.get(iterations.size() - 1).result_funct);
+
         TextTable tt = new TextTable(columns, data);
         tt.printTable();
-
     }
 }
