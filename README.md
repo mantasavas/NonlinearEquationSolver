@@ -41,8 +41,31 @@ From graph we could clearly see, that this iteration should converge, but let's 
 3) when  x2 = 0.76      then    g(0.76)     =     arctan(0.76)      = 0.6499
 4) when  x2 = 0.6499    then    g(0.6499)   =     arctan(0.6499)    = 0.5763
 
-It clearly slowly converges, and after many iterations we should get to our precise solution. But we should be conscious about precision, because then it slowly converges it is indicator that with the high precision given, we could still be far away from our solution.
+We stop after it meets condition: |g(xn) - xn| <= ((1-q)/q)*e, where e is precision, q is derivative in defined interval [a, b]. It clearly slowly converges, and after many iterations we should get to our precise solution. But we should be conscious about precision, because then it slowly converges it is indicator that with the high precision given, we could still be far away from our solution.
 
 Let's say n=1, when we could clearly see, this this iteration even nicer converges to our precise solution, in graph you can see functions: f(x) = tan(x), f(x) = arctan(x) + pi, f(x) = x
 
 ![capture1](https://user-images.githubusercontent.com/14164123/30774158-b2434d16-a086-11e7-8c14-35161ec4c20d.PNG)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Our sencod method which we are goind to use to solve equation x = tan(x) is call secant method
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+This method is more efficiant when previous method, the convergion to sulution happens much more faster. First step, we need to rewrite function:
+1) x = tan(x)
+2) f(x) = tan(x) - x
+
+After that we pick two arbitrary points. Lets say this is: x0 = 2 and x1 = 4, and for example we wanna get solution 4.493 When we draw some graphs to get a visual idea there is this going for
+
+![capture](https://user-images.githubusercontent.com/14164123/30774379-41cf259c-a08a-11e7-91f9-d2d20d52342a.PNG)
+
+We won't get that solution, so we need to change two initial point, maybe when we will get some success. Lets take x0 = 4.4 and x1 = 4.6
+
+![capture](https://user-images.githubusercontent.com/14164123/30774451-5a693aa6-a08b-11e7-8fb7-1e2fec14d23d.PNG)
+
+There wasn't any space left, but with little imagination we can later on it should get more and more closer to our so desired solution 4.493 :) 
+
+
+
